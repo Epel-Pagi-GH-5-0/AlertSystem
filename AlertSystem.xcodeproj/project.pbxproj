@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A63AF7DB2C403C0900FE0B74 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63AF7DA2C403C0900FE0B74 /* HomeView.swift */; };
+		A63AF7DD2C403F4500FE0B74 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63AF7DC2C403F4500FE0B74 /* NotificationViewModel.swift */; };
 		E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A32C403991008883D4 /* AlertSystemApp.swift */; };
 		E42819A62C403991008883D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A52C403991008883D4 /* ContentView.swift */; };
 		E42819A82C403993008883D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42819A72C403993008883D4 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A63AF7DA2C403C0900FE0B74 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A63AF7DC2C403F4500FE0B74 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		E42819A02C403991008883D4 /* AlertSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42819A32C403991008883D4 /* AlertSystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemApp.swift; sourceTree = "<group>"; };
 		E42819A52C403991008883D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A63AF7D52C403B4400FE0B74 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				A63AF7DC2C403F4500FE0B74 /* NotificationViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		A63AF7D62C403B5300FE0B74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A63AF7DA2C403C0900FE0B74 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A63AF7D72C403B5E00FE0B74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E42819972C403991008883D4 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +123,9 @@
 			children = (
 				E42819A32C403991008883D4 /* AlertSystemApp.swift */,
 				E42819A52C403991008883D4 /* ContentView.swift */,
+				A63AF7D72C403B5E00FE0B74 /* Model */,
+				A63AF7D62C403B5300FE0B74 /* View */,
+				A63AF7D52C403B4400FE0B74 /* View Model */,
 				E42819A72C403993008883D4 /* Assets.xcassets */,
 				E42819A92C403993008883D4 /* Preview Content */,
 			);
@@ -258,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E42819A62C403991008883D4 /* ContentView.swift in Sources */,
+				A63AF7DD2C403F4500FE0B74 /* NotificationViewModel.swift in Sources */,
+				A63AF7DB2C403C0900FE0B74 /* HomeView.swift in Sources */,
 				E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +454,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlertSystem/Preview Content\"";
-				DEVELOPMENT_TEAM = Z5LAH6MA86;
+				DEVELOPMENT_TEAM = T7SD288Q5G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -430,6 +462,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,7 +484,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlertSystem/Preview Content\"";
-				DEVELOPMENT_TEAM = Z5LAH6MA86;
+				DEVELOPMENT_TEAM = T7SD288Q5G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -459,6 +492,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
