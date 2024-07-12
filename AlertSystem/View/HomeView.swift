@@ -14,10 +14,14 @@ struct HomeView: View {
             
             HStack {
                 Spacer()
-                Image(systemName: "person.crop.circle")
-                    .foregroundColor(.blue)
-                    .font(.system(size: 30))
-                    .padding(.trailing, 10)
+                Button(action: {
+                    FirebaseViewModel().logout()
+                }, label: {
+                    Image(systemName: "person.crop.circle")
+                        .foregroundColor(.blue)
+                        .font(.system(size: 30))
+                        .padding(.trailing, 10)
+                })
             }
             
             ZStack {

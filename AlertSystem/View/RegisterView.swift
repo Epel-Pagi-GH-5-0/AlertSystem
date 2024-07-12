@@ -24,7 +24,7 @@ struct RegisterView: View {
                     return
                 }
                 
-                signInWithGoogle(presentingViewController: presentingViewController) { result in
+                FirebaseViewModel().signInWithGoogle(presentingViewController: presentingViewController) { result in
                     switch result {
                     case .success(let user):
                         print("User signed in with Firebase: \(user.email ?? "No email")")

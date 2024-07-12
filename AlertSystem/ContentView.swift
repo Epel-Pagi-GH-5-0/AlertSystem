@@ -1,20 +1,21 @@
-//
-//  ContentView.swift
-//  AlertSystem
-//
-//  Created by Romi Fadhurohman Nabil on 11/07/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = FirebaseViewModel()
+    
     var body: some View {
         NavigationView {
-            RegisterView()
+            if viewModel.isSignedIn {
+                HomeView()
+            } else {
+                RegisterView()
+            }
         }
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
