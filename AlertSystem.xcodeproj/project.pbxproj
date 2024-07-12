@@ -21,6 +21,8 @@
 		A6E0C3F42C411DBF006E584B /* CustomRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3F32C411DBF006E584B /* CustomRoundedButton.swift */; };
 		A6E0C3F62C411E0A006E584B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3F52C411E0A006E584B /* ProfileView.swift */; };
 		A6E0C3F82C411F10006E584B /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3F72C411F10006E584B /* EmergencyView.swift */; };
+		A6E0C3FC2C413075006E584B /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3FB2C413075006E584B /* LocationViewModel.swift */; };
+		A6E0C3FE2C41309D006E584B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3FD2C41309D006E584B /* Location.swift */; };
 		E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A32C403991008883D4 /* AlertSystemApp.swift */; };
 		E42819A62C403991008883D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A52C403991008883D4 /* ContentView.swift */; };
 		E42819A82C403993008883D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42819A72C403993008883D4 /* Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		A6E0C3F32C411DBF006E584B /* CustomRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRoundedButton.swift; sourceTree = "<group>"; };
 		A6E0C3F52C411E0A006E584B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A6E0C3F72C411F10006E584B /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
+		A6E0C3FB2C413075006E584B /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		A6E0C3FD2C41309D006E584B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E42819A02C403991008883D4 /* AlertSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42819A32C403991008883D4 /* AlertSystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemApp.swift; sourceTree = "<group>"; };
 		E42819A52C403991008883D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				A63AF7F52C4109A400FE0B74 /* Utils */,
 				A63AF7DC2C403F4500FE0B74 /* NotificationViewModel.swift */,
 				A63AF7E02C404B4E00FE0B74 /* FirebaseViewModel.swift */,
+				A6E0C3FB2C413075006E584B /* LocationViewModel.swift */,
 				E49FC8842C411DB500102FC2 /* UserDataViewModel.swift */,
 				E49FC8862C411E2C00102FC2 /* EmergencyContactViewModel.swift */,
 			);
@@ -141,6 +146,7 @@
 		A63AF7D72C403B5E00FE0B74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A6E0C3FD2C41309D006E584B /* Location.swift */,
 				E49FC87E2C4117CD00102FC2 /* UserData.swift */,
 				E49FC8822C411C1300102FC2 /* EmergencyContact.swift */,
 			);
@@ -395,12 +401,14 @@
 				A6E0C3F62C411E0A006E584B /* ProfileView.swift in Sources */,
 				A6E0C3F42C411DBF006E584B /* CustomRoundedButton.swift in Sources */,
 				A63AF7E12C404B4E00FE0B74 /* FirebaseViewModel.swift in Sources */,
+				A6E0C3FE2C41309D006E584B /* Location.swift in Sources */,
 				A6E0C3F82C411F10006E584B /* EmergencyView.swift in Sources */,
 				A63AF7F42C40C7D600FE0B74 /* AppDelegate.swift in Sources */,
 				E49FC87F2C4117CD00102FC2 /* UserData.swift in Sources */,
 				E49FC88D2C41215500102FC2 /* HashPassword.swift in Sources */,
 				A63AF7F82C4109C700FE0B74 /* Line.swift in Sources */,
 				A6E0C3F12C411B69006E584B /* ImagePicker.swift in Sources */,
+				A6E0C3FC2C413075006E584B /* LocationViewModel.swift in Sources */,
 				A63AF7DB2C403C0900FE0B74 /* HomeView.swift in Sources */,
 				E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */,
 			);
@@ -571,8 +579,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlertSystem/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = need;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = need;
+				INFOPLIST_KEY_NSLocationUsageDescription = need;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = need;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -603,8 +614,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlertSystem/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = need;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = need;
+				INFOPLIST_KEY_NSLocationUsageDescription = need;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = need;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
