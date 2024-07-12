@@ -2,8 +2,21 @@ import SwiftUI
 import Firebase
 
 struct RegisterView: View {
+    
+    @State private var isSignedIn = false
+    
     var body: some View {
         VStack {
+            Image(systemName: "lock.shield.fill")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundColor(.blue)
+            
+            Text("Alert System")
+                .font(.title)
+                .padding()
+            
             Button(action: {
                 // Get the top most view controller
                 guard let presentingViewController = UIApplication.shared.windows.first?.rootViewController else {
@@ -15,18 +28,34 @@ struct RegisterView: View {
                     switch result {
                     case .success(let user):
                         print("User signed in with Firebase: \(user.email ?? "No email")")
-                        // Proceed with your app's flow
+                        self.isSignedIn = true // Set state to true upon success
                     case .failure(let error):
                         print("Error during sign-in: \(error.localizedDescription)")
                     }
                 }
             }, label: {
-                Text("Sign in with Google")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+                Image("googleLight")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 50)
             })
+            .padding()
+            
+            NavigationLink(
+                destination: HomeView(), // Replace with the destination view upon successful sign-in
+                isActive: self.$isSignedIn,
+                label: {
+                    EmptyView() // This can be an empty view, the label itself isn't displayed
+                })
+                .hidden() // Hide the navigation link, it will navigate automatically when isActive is true
         }
+    }
+}
+
+struct SignedInView: View {
+    var body: some View {
+        Text("Successfully Signed In!")
+            .font(.title)
+            .padding()
     }
 }
