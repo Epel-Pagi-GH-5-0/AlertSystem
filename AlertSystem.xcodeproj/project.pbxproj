@@ -24,6 +24,7 @@
 		A6E0C3FC2C413075006E584B /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3FB2C413075006E584B /* LocationViewModel.swift */; };
 		A6E0C3FE2C41309D006E584B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3FD2C41309D006E584B /* Location.swift */; };
 		A6E0C4002C4135B0006E584B /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3FF2C4135B0006E584B /* TrackView.swift */; };
+		A6E0C4032C41832F006E584B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C4022C41832F006E584B /* Color.swift */; };
 		E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A32C403991008883D4 /* AlertSystemApp.swift */; };
 		E42819A62C403991008883D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A52C403991008883D4 /* ContentView.swift */; };
 		E42819A82C403993008883D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42819A72C403993008883D4 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		A6E0C3FB2C413075006E584B /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		A6E0C3FD2C41309D006E584B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A6E0C3FF2C4135B0006E584B /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		A6E0C4022C41832F006E584B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E42819A02C403991008883D4 /* AlertSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42819A32C403991008883D4 /* AlertSystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemApp.swift; sourceTree = "<group>"; };
 		E42819A52C403991008883D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,14 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		A6E0C4012C418323006E584B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A6E0C4022C41832F006E584B /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		E42819972C403991008883D4 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +205,7 @@
 		E42819A22C403991008883D4 /* AlertSystem */ = {
 			isa = PBXGroup;
 			children = (
+				A6E0C4012C418323006E584B /* Extension */,
 				A63AF7F22C40C73100FE0B74 /* Info.plist */,
 				A63AF7F02C405CD000FE0B74 /* GoogleService-Info.plist */,
 				A63AF7F32C40C7D600FE0B74 /* AppDelegate.swift */,
@@ -377,6 +388,7 @@
 				A63AF7DF2C404AAA00FE0B74 /* RegisterView.swift in Sources */,
 				A6E0C3EF2C411785006E584B /* UserDataView.swift in Sources */,
 				A63AF7DD2C403F4500FE0B74 /* NotificationViewModel.swift in Sources */,
+				A6E0C4032C41832F006E584B /* Color.swift in Sources */,
 				A6E0C3F62C411E0A006E584B /* ProfileView.swift in Sources */,
 				A6E0C3F42C411DBF006E584B /* CustomRoundedButton.swift in Sources */,
 				A63AF7E12C404B4E00FE0B74 /* FirebaseViewModel.swift in Sources */,
@@ -556,6 +568,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlertSystem/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GuardI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = need;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = need;
@@ -591,6 +604,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlertSystem/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GuardI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = need;
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = need;

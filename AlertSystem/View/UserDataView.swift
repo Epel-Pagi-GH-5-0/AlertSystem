@@ -26,52 +26,68 @@ struct UserDataView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("User Data")
+            Text("Personal Information")
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.top, 20)
                 .padding(.bottom, 70)
             
             // Full Name TextField
+            Text("Full Name")
+                .font(.headline)
+            
             TextField("Full Name", text: $fullName)
                 .textFieldStyle(CustomRoundedTextFieldStyle())
             
             // Email TextField
+            Text("Email")
+                .font(.headline)
+            
             TextField("Email", text: $email)
                 .textFieldStyle(CustomRoundedTextFieldStyle())
                 .keyboardType(.emailAddress)
             
             // Phone TextField
+            Text("Phone")
+                .font(.headline)
+            
             TextField("Phone", text: $phone)
                 .textFieldStyle(CustomRoundedTextFieldStyle())
                 .keyboardType(.phonePad)
             
-            // Gender Radio Buttons
             Text("Gender")
                 .font(.headline)
+            
             HStack {
                 ForEach(Gender.allCases, id: \.self) { option in
                     RadioButtonField(text: option.rawValue, isSelected: option == gender) {
                         gender = option
                     }
+                    .background(option == gender ? Color.blue.opacity(0.2) : Color.gray.opacity(0.1))
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(option == gender ? Color.blue : Color.gray, lineWidth: 1)
+                    )
                 }
             }
+            .padding()
             
             // Photo Selection
-            Text("Photo")
-                .font(.headline)
-            Button(action: {
-                showImagePicker.toggle()
-            }) {
-                HStack(alignment: .center) {
-                    Image(systemName: "photo.badge.plus")
-                        .resizable()
-                        .frame(width: 50, height: 40)
-                    Text("Select Photo")
-                        .foregroundColor(.blue)
-                        .padding(.bottom, 5)
-                }
-            }
+//            Text("Photo")
+//                .font(.headline)
+//            Button(action: {
+//                showImagePicker.toggle()
+//            }) {
+//                HStack(alignment: .center) {
+//                    Image(systemName: "photo.badge.plus")
+//                        .resizable()
+//                        .frame(width: 50, height: 40)
+//                    Text("Select Photo")
+//                        .foregroundColor(.blue)
+//                        .padding(.bottom, 5)
+//                }
+//            }
             
             Spacer() // Center the following elements
             
@@ -80,7 +96,7 @@ struct UserDataView: View {
                 Spacer()
                 NavigationLink(destination: RegisterView()) {
                     Text("Submit")
-                        .padding(.horizontal, 100)
+                        .padding(.horizontal, 120)
                         .padding()
                         .background(Color.blue)
                         .cornerRadius(10)
@@ -104,22 +120,29 @@ struct RadioButtonField: View {
     let text: String
     let isSelected: Bool
     let action: () -> Void
-    
+
     var body: some View {
         Button(action: action) {
             HStack {
-                Image(systemName: isSelected ? "largecircle.fill.circle" : "circle")
                 Text(text)
+                    .foregroundColor(isSelected ? .blue : .black)
+                Spacer()
+                if isSelected {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.blue)
+                } else {
+                    Image(systemName: "circle")
+                        .foregroundColor(.gray)
+                }
             }
-            .foregroundColor(.primary)
-            .padding(.vertical, 8)
+            .padding()
+            .background(isSelected ? Color.blue.opacity(0.2) : Color.gray.opacity(0.1))
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(isSelected ? Color.blue : Color.gray, lineWidth: 1)
+            )
         }
-        .buttonStyle(PlainButtonStyle())
     }
 }
 
-struct UserDataView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserDataView()
-    }
-}

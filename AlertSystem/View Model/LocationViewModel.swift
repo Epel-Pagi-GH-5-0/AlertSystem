@@ -73,6 +73,11 @@ class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // Handle the error
+        print("Location manager failed with error: \(error.localizedDescription)")
+    }
+    
     func getLocation() -> Location {
         return self.location
     }
