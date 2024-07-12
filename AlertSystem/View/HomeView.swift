@@ -1,24 +1,27 @@
 import SwiftUI
+import MapKit
+import CoreLocation
 
 struct HomeView: View {
     
     @StateObject var viewModel = NotificationViewModel()
+    @StateObject var locationManager = LocationViewModel()
     
     @State private var titleVal = "SOS"
     @State private var bodyVal = "SOS - Somebody needs help!"
     @State private var identifierVal = "SOS"
     @State private var tapProgress: CGFloat = 0.00
     @State private var haveEmergencyContact = true
+    
 
     var body: some View {
         VStack {
-            
             HStack {
                 Spacer()
                 NavigationLink(destination: {
                     ProfileView()
                 }, label: {
-                    Image(systemName: "person.crop.circle")
+                    Image(systemName: "gearshape")
                         .foregroundColor(.blue)
                         .font(.system(size: 30))
                         .padding(.trailing, 10)
@@ -41,7 +44,7 @@ struct HomeView: View {
                     .padding(.top, 20)
                 
                 VStack(spacing: 2) {
-                    ForEach([("location.fill", "Location", "Jl. Pantura Raya", Color.blue), ("wifi", "Connection", "Active", Color.green)], id: \.1) { icon, text, detail, color in
+                    ForEach([("location.fill", "Location", locationManager.getLocation().city+", "+locationManager.getLocation().country, Color.blue), ("wifi", "Connection", "Active", Color.green)], id: \.1) { icon, text, detail, color in
                         HStack {
                             Image(systemName: icon)
                                 .foregroundColor(color)

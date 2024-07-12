@@ -2,17 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <!-- Other existing keys in Info.plist -->
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>com.googleusercontent.apps.857565152450-607feuat7vk7jb5q9gf93blj0non0sf7</string>
-            </array>
-        </dict>
-        <!-- You can have multiple URL schemes if needed -->
-    </array>
-    <!-- Other existing keys in Info.plist -->
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.857565152450-607feuat7vk7jb5q9gf93blj0non0sf7</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
