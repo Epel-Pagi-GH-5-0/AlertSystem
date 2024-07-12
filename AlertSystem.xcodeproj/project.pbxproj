@@ -23,6 +23,13 @@
 		E42819B52C403993008883D4 /* AlertSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819B42C403993008883D4 /* AlertSystemTests.swift */; };
 		E42819BF2C403993008883D4 /* AlertSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819BE2C403993008883D4 /* AlertSystemUITests.swift */; };
 		E42819C12C403993008883D4 /* AlertSystemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819C02C403993008883D4 /* AlertSystemUITestsLaunchTests.swift */; };
+		E49FC87F2C4117CD00102FC2 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FC87E2C4117CD00102FC2 /* UserData.swift */; };
+		E49FC8832C411C1300102FC2 /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FC8822C411C1300102FC2 /* EmergencyContact.swift */; };
+		E49FC8852C411DB500102FC2 /* UserDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FC8842C411DB500102FC2 /* UserDataViewModel.swift */; };
+		E49FC8872C411E2C00102FC2 /* EmergencyContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FC8862C411E2C00102FC2 /* EmergencyContactViewModel.swift */; };
+		E49FC8892C411FBE00102FC2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E49FC8882C411FBE00102FC2 /* FirebaseFirestore */; };
+		E49FC88D2C41215500102FC2 /* HashPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FC88C2C41215500102FC2 /* HashPassword.swift */; };
+		E49FC88F2C4122A000102FC2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E49FC88E2C4122A000102FC2 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,11 @@
 		E42819BA2C403993008883D4 /* AlertSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42819BE2C403993008883D4 /* AlertSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemUITests.swift; sourceTree = "<group>"; };
 		E42819C02C403993008883D4 /* AlertSystemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E49FC87E2C4117CD00102FC2 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserData.swift; path = "AlertSystem/View Model/UserData.swift"; sourceTree = SOURCE_ROOT; };
+		E49FC8822C411C1300102FC2 /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmergencyContact.swift; path = "AlertSystem/View Model/EmergencyContact.swift"; sourceTree = SOURCE_ROOT; };
+		E49FC8842C411DB500102FC2 /* UserDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewModel.swift; sourceTree = "<group>"; };
+		E49FC8862C411E2C00102FC2 /* EmergencyContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContactViewModel.swift; sourceTree = "<group>"; };
+		E49FC88C2C41215500102FC2 /* HashPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,8 @@
 			files = (
 				A6E0C3EB2C41124A006E584B /* FirebaseAuth in Frameworks */,
 				A6E0C3ED2C41124E006E584B /* GoogleSignIn in Frameworks */,
+				E49FC8892C411FBE00102FC2 /* FirebaseFirestore in Frameworks */,
+				E49FC88F2C4122A000102FC2 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,8 @@
 				A63AF7F52C4109A400FE0B74 /* Utils */,
 				A63AF7DC2C403F4500FE0B74 /* NotificationViewModel.swift */,
 				A63AF7E02C404B4E00FE0B74 /* FirebaseViewModel.swift */,
+				E49FC8842C411DB500102FC2 /* UserDataViewModel.swift */,
+				E49FC8862C411E2C00102FC2 /* EmergencyContactViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -112,6 +128,8 @@
 		A63AF7D72C403B5E00FE0B74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E49FC87E2C4117CD00102FC2 /* UserData.swift */,
+				E49FC8822C411C1300102FC2 /* EmergencyContact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A63AF7F62C4109AA00FE0B74 /* Shape */,
+				E49FC88C2C41215500102FC2 /* HashPassword.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -221,6 +240,8 @@
 			packageProductDependencies = (
 				A6E0C3EA2C41124A006E584B /* FirebaseAuth */,
 				A6E0C3EC2C41124E006E584B /* GoogleSignIn */,
+				E49FC8882C411FBE00102FC2 /* FirebaseFirestore */,
+				E49FC88E2C4122A000102FC2 /* FirebaseFirestoreSwift */,
 			);
 			productName = AlertSystem;
 			productReference = E42819A02C403991008883D4 /* AlertSystem.app */;
@@ -341,11 +362,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49FC8832C411C1300102FC2 /* EmergencyContact.swift in Sources */,
+				E49FC8872C411E2C00102FC2 /* EmergencyContactViewModel.swift in Sources */,
+				E49FC8852C411DB500102FC2 /* UserDataViewModel.swift in Sources */,
 				E42819A62C403991008883D4 /* ContentView.swift in Sources */,
 				A63AF7DF2C404AAA00FE0B74 /* RegisterView.swift in Sources */,
 				A63AF7DD2C403F4500FE0B74 /* NotificationViewModel.swift in Sources */,
 				A63AF7E12C404B4E00FE0B74 /* FirebaseViewModel.swift in Sources */,
 				A63AF7F42C40C7D600FE0B74 /* AppDelegate.swift in Sources */,
+				E49FC87F2C4117CD00102FC2 /* UserData.swift in Sources */,
+				E49FC88D2C41215500102FC2 /* HashPassword.swift in Sources */,
 				A63AF7F82C4109C700FE0B74 /* Line.swift in Sources */,
 				A63AF7DB2C403C0900FE0B74 /* HomeView.swift in Sources */,
 				E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */,
@@ -512,7 +538,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlertSystem/Preview Content\"";
-				DEVELOPMENT_TEAM = T7SD288Q5G;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlertSystem/Info.plist;
@@ -544,7 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlertSystem/Preview Content\"";
-				DEVELOPMENT_TEAM = T7SD288Q5G;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlertSystem/Info.plist;
@@ -714,6 +740,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A6E0C3E92C411230006E584B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		E49FC8882C411FBE00102FC2 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6E0C3E82C411224006E584B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E49FC88E2C4122A000102FC2 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A6E0C3E82C411224006E584B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
