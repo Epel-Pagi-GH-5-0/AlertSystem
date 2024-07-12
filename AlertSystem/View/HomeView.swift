@@ -11,6 +11,49 @@ struct HomeView: View {
 
     var body: some View {
         VStack {
+            
+            HStack {
+                Spacer()
+                Image(systemName: "person.crop.circle")
+                    .foregroundColor(.blue)
+                    .font(.system(size: 30))
+                    .padding(.trailing, 10)
+            }
+            
+            ZStack {
+                Rectangle()
+                    .frame(width: 350, height: 80)
+                    .cornerRadius(10)
+                    .foregroundColor(Color.gray.opacity(0.1))
+                    .padding(.top, 20)
+                
+                VStack(spacing: 2) {
+                    ForEach([("location.fill", "Location", "Jl. Pantura Raya", Color.blue), ("wifi", "Connection", "Active", Color.green)], id: \.1) { icon, text, detail, color in
+                        HStack {
+                            Image(systemName: icon)
+                                .foregroundColor(color)
+                                .frame(width: 20)
+                                .padding(.trailing, 10)
+                            Text(text)
+                                .fontWeight(.bold)
+                            Spacer()
+                            Text(detail)
+                        }
+                        .padding(.horizontal, 20)
+                        
+                        if icon != "wifi" {
+                            Line(startPoint: CGPoint(x: 10, y: 0), endPoint: CGPoint(x: 350, y: 0))
+                                .stroke(Color.gray.opacity(0.5), lineWidth: 1)
+                                .frame(height: 1)
+                                .padding(.vertical, 8)
+                        }
+                    }
+                }
+                .padding(.top, 20)
+            }
+            
+            Spacer()
+            
             ZStack {
                 Circle()
                     .frame(width: 210, height: 350)
@@ -33,8 +76,14 @@ struct HomeView: View {
                         .background(Color.red)
                         .clipShape(Circle())
                 })
+                
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            Text("To start emergency tap the button 3 times")
+                .frame(width: 200)
+                .multilineTextAlignment(.center)
+            
+            Spacer()
         }
         .padding()
         .onAppear {

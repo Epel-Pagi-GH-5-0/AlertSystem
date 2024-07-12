@@ -15,6 +15,7 @@
 		A63AF7EB2C40592200FE0B74 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = A63AF7EA2C40592200FE0B74 /* GoogleSignIn */; };
 		A63AF7F12C405CD000FE0B74 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A63AF7F02C405CD000FE0B74 /* GoogleService-Info.plist */; };
 		A63AF7F42C40C7D600FE0B74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63AF7F32C40C7D600FE0B74 /* AppDelegate.swift */; };
+		A63AF7F82C4109C700FE0B74 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63AF7F72C4109C700FE0B74 /* Line.swift */; };
 		E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A32C403991008883D4 /* AlertSystemApp.swift */; };
 		E42819A62C403991008883D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A52C403991008883D4 /* ContentView.swift */; };
 		E42819A82C403993008883D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42819A72C403993008883D4 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		A63AF7F02C405CD000FE0B74 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A63AF7F22C40C73100FE0B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A63AF7F32C40C7D600FE0B74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A63AF7F72C4109C700FE0B74 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		E42819A02C403991008883D4 /* AlertSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlertSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42819A32C403991008883D4 /* AlertSystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemApp.swift; sourceTree = "<group>"; };
 		E42819A52C403991008883D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		A63AF7D52C403B4400FE0B74 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				A63AF7F52C4109A400FE0B74 /* Utils */,
 				A63AF7DC2C403F4500FE0B74 /* NotificationViewModel.swift */,
 				A63AF7E02C404B4E00FE0B74 /* FirebaseViewModel.swift */,
 			);
@@ -118,6 +121,22 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A63AF7F52C4109A400FE0B74 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A63AF7F62C4109AA00FE0B74 /* Shape */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A63AF7F62C4109AA00FE0B74 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				A63AF7F72C4109C700FE0B74 /* Line.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 		E42819972C403991008883D4 = {
@@ -327,6 +346,7 @@
 				A63AF7DD2C403F4500FE0B74 /* NotificationViewModel.swift in Sources */,
 				A63AF7E12C404B4E00FE0B74 /* FirebaseViewModel.swift in Sources */,
 				A63AF7F42C40C7D600FE0B74 /* AppDelegate.swift in Sources */,
+				A63AF7F82C4109C700FE0B74 /* Line.swift in Sources */,
 				A63AF7DB2C403C0900FE0B74 /* HomeView.swift in Sources */,
 				E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */,
 			);
