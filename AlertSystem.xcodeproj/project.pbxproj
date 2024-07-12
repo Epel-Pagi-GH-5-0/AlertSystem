@@ -146,6 +146,7 @@
 			children = (
 				A63AF7F22C40C73100FE0B74 /* Info.plist */,
 				A63AF7F02C405CD000FE0B74 /* GoogleService-Info.plist */,
+				A63AF7F32C40C7D600FE0B74 /* AppDelegate.swift */,
 				E42819A32C403991008883D4 /* AlertSystemApp.swift */,
 				E42819A52C403991008883D4 /* ContentView.swift */,
 				A63AF7D72C403B5E00FE0B74 /* Model */,
@@ -153,7 +154,6 @@
 				A63AF7D52C403B4400FE0B74 /* View Model */,
 				E42819A72C403993008883D4 /* Assets.xcassets */,
 				E42819A92C403993008883D4 /* Preview Content */,
-				A63AF7F32C40C7D600FE0B74 /* AppDelegate.swift */,
 			);
 			path = AlertSystem;
 			sourceTree = "<group>";
