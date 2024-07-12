@@ -32,6 +32,7 @@
 		E42819B52C403993008883D4 /* AlertSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819B42C403993008883D4 /* AlertSystemTests.swift */; };
 		E42819BF2C403993008883D4 /* AlertSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819BE2C403993008883D4 /* AlertSystemUITests.swift */; };
 		E42819C12C403993008883D4 /* AlertSystemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819C02C403993008883D4 /* AlertSystemUITestsLaunchTests.swift */; };
+		E49FC8A22C419C5100102FC2 /* EmergencyAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FC8A12C419C5100102FC2 /* EmergencyAlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		E42819BA2C403993008883D4 /* GuardiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuardiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42819BE2C403993008883D4 /* AlertSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemUITests.swift; sourceTree = "<group>"; };
 		E42819C02C403993008883D4 /* AlertSystemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E49FC8A12C419C5100102FC2 /* EmergencyAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				A63AF7DC2C403F4500FE0B74 /* NotificationViewModel.swift */,
 				A63AF7E02C404B4E00FE0B74 /* FirebaseViewModel.swift */,
 				A6E0C3FB2C413075006E584B /* LocationViewModel.swift */,
+				E49FC8A12C419C5100102FC2 /* EmergencyAlertManager.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			files = (
 				E42819A62C403991008883D4 /* ContentView.swift in Sources */,
 				A63AF7DF2C404AAA00FE0B74 /* RegisterView.swift in Sources */,
+				E49FC8A22C419C5100102FC2 /* EmergencyAlertManager.swift in Sources */,
 				A6E0C3EF2C411785006E584B /* UserDataView.swift in Sources */,
 				A63AF7DD2C403F4500FE0B74 /* NotificationViewModel.swift in Sources */,
 				A6E0C4032C41832F006E584B /* Color.swift in Sources */,
