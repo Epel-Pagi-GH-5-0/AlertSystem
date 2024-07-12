@@ -14,11 +14,19 @@ struct HomeView: View {
             
             HStack {
                 Spacer()
-                Button(action: {
-                    FirebaseViewModel().logout()
+                NavigationLink(destination: {
+                    ProfileView()
                 }, label: {
                     Image(systemName: "person.crop.circle")
                         .foregroundColor(.blue)
+                        .font(.system(size: 30))
+                        .padding(.trailing, 10)
+                })
+                Button(action: {
+                    FirebaseViewModel().logout()
+                }, label: {
+                    Image(systemName: "rectangle.portrait.and.arrow.right.fill")
+                        .foregroundColor(.red)
                         .font(.system(size: 30))
                         .padding(.trailing, 10)
                 })
@@ -54,6 +62,26 @@ struct HomeView: View {
                     }
                 }
                 .padding(.top, 20)
+            }
+            
+            ZStack {
+                Rectangle()
+                    .frame(width: 350, height: 80)
+                    .cornerRadius(10)
+                    .foregroundColor(Color.yellow.opacity(0.2))
+                    .padding(.top, 20)
+                
+                HStack(alignment: .center) {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                        .font(.title)
+                        .foregroundColor(.yellow)
+                        .padding(.trailing, 10)
+                        .padding(.top, 15)
+                    Text("To activate alerts, please set up an emergency contact. Go to your profile to add one now.")
+                        .frame(width: 250)
+                        .multilineTextAlignment(.leading)
+                        .padding(.top, 20)
+                }
             }
             
             Spacer()
