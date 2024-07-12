@@ -1,65 +1,47 @@
-//
-//  EmergencyView.swift
-//  AlertSystem
-//
-//  Created by Joshua Wenata Sunarto on 12/07/24.
-//
-
 import SwiftUI
 
+struct EmergencyContact: Identifiable {
+    var id = UUID()
+    var name: String = ""
+    var email: String = ""
+}
+
 struct EmergencyView: View {
-    // Example emergency contacts
-    @State private var emergencyContacts = [
-        "test1@test.com",
-        "test2@test.com",
-        "test3@test.com",
-    ]
-    @State private var newContactName: String = ""
+    @State private var contacts: [EmergencyContact] = [EmergencyContact(), EmergencyContact()]
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                List {
-                    ForEach(emergencyContacts, id: \.self) { contact in
-                        Text(contact)
-                    }
-                    .onDelete(perform: deleteContact)
-                }
-                .listStyle(GroupedListStyle())
-                
-                HStack {
-                    TextField("Enter new contact email", text: $newContactName)
-                        .textFieldStyle(CustomRoundedTextFieldStyle())
-                    
-                    Button(action: {
-                        // Action for adding a new emergency contact
-                        // Replace with your logic to add a new contact
-                        if !newContactName.isEmpty {
-                            emergencyContacts.append(newContactName)
-                            newContactName = ""
+            VStack {
+                Form {
+                    ForEach(contacts.indices, id: \.self) { index in
+                        Section(header: Text("Person \(index + 1)")) {
+                            TextField("Name", text: $contacts[index].name)
+                            TextField("Email", text: $contacts[index].email)
                         }
+                    }
+                    Button(action: {
+                        contacts.append(EmergencyContact())
                     }) {
-                        Text("Add")
-                            .padding(.horizontal, 20)
-                            .padding(.vertical, 10)
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(10)
+                        HStack {
+                            Image(systemName: "plus.circle")
+                            Text("Add emergency contact")
+                        }
                     }
                 }
-                .padding(.horizontal)
+                .navigationBarTitle("Emergency Contact")
+                
+                Button(action: {
+                    // Handle save action
+                }) {
+                    Text("Save")
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                .padding()
             }
-            .navigationBarTitle("Emergency Contacts")
         }
-    }
-    
-    private func deleteContact(at offsets: IndexSet) {
-        emergencyContacts.remove(atOffsets: offsets)
-    }
-}
-
-struct EmergencyView_Previews: PreviewProvider {
-    static var previews: some View {
-        EmergencyView()
     }
 }
