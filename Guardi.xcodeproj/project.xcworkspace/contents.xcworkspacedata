@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/romi/Documents/Dev/Competition/Garuda Hacks 5.0/Deploy Testflight/AlertSystem/Guardi.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

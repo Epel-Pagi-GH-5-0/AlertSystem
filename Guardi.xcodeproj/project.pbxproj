@@ -22,7 +22,6 @@
 		A6E0C3F62C411E0A006E584B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3F52C411E0A006E584B /* ProfileView.swift */; };
 		A6E0C3F82C411F10006E584B /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3F72C411F10006E584B /* EmergencyView.swift */; };
 		A6E0C3FC2C413075006E584B /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3FB2C413075006E584B /* LocationViewModel.swift */; };
-		A6E0C3FE2C41309D006E584B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3FD2C41309D006E584B /* Location.swift */; };
 		A6E0C4002C4135B0006E584B /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C3FF2C4135B0006E584B /* TrackView.swift */; };
 		A6E0C4032C41832F006E584B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E0C4022C41832F006E584B /* Color.swift */; };
 		E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819A32C403991008883D4 /* AlertSystemApp.swift */; };
@@ -33,6 +32,10 @@
 		E42819BF2C403993008883D4 /* AlertSystemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819BE2C403993008883D4 /* AlertSystemUITests.swift */; };
 		E42819C12C403993008883D4 /* AlertSystemUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42819C02C403993008883D4 /* AlertSystemUITestsLaunchTests.swift */; };
 		E49FC8A22C419C5100102FC2 /* EmergencyAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FC8A12C419C5100102FC2 /* EmergencyAlertManager.swift */; };
+		E4A8AFA42C41F6AE00EAC5B9 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8AFA32C41F6AE00EAC5B9 /* ChatView.swift */; };
+		E4A8AFAB2C41F76700EAC5B9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8AFAA2C41F76700EAC5B9 /* Location.swift */; };
+		E4A8AFAE2C41F78200EAC5B9 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8AFAC2C41F78200EAC5B9 /* NetworkMonitor.swift */; };
+		E4A8AFAF2C41F78200EAC5B9 /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A8AFAD2C41F78200EAC5B9 /* OpenAIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +70,6 @@
 		A6E0C3F52C411E0A006E584B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A6E0C3F72C411F10006E584B /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 		A6E0C3FB2C413075006E584B /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
-		A6E0C3FD2C41309D006E584B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A6E0C3FF2C4135B0006E584B /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
 		A6E0C4022C41832F006E584B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E42819A02C403991008883D4 /* Guardi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guardi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,10 @@
 		E42819BE2C403993008883D4 /* AlertSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemUITests.swift; sourceTree = "<group>"; };
 		E42819C02C403993008883D4 /* AlertSystemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E49FC8A12C419C5100102FC2 /* EmergencyAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyAlertManager.swift; sourceTree = "<group>"; };
+		E4A8AFA32C41F6AE00EAC5B9 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		E4A8AFAA2C41F76700EAC5B9 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E4A8AFAC2C41F78200EAC5B9 /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		E4A8AFAD2C41F78200EAC5B9 /* OpenAIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,8 @@
 		A63AF7D52C403B4400FE0B74 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4A8AFAC2C41F78200EAC5B9 /* NetworkMonitor.swift */,
+				E4A8AFAD2C41F78200EAC5B9 /* OpenAIService.swift */,
 				A63AF7F52C4109A400FE0B74 /* Utils */,
 				A63AF7DC2C403F4500FE0B74 /* NotificationViewModel.swift */,
 				A63AF7E02C404B4E00FE0B74 /* FirebaseViewModel.swift */,
@@ -125,6 +133,7 @@
 		A63AF7D62C403B5300FE0B74 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4A8AFA32C41F6AE00EAC5B9 /* ChatView.swift */,
 				A63AF7DA2C403C0900FE0B74 /* HomeView.swift */,
 				A63AF7DE2C404AAA00FE0B74 /* RegisterView.swift */,
 				A6E0C3EE2C411785006E584B /* UserDataView.swift */,
@@ -138,7 +147,7 @@
 		A63AF7D72C403B5E00FE0B74 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A6E0C3FD2C41309D006E584B /* Location.swift */,
+				E4A8AFAA2C41F76700EAC5B9 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A8AFA42C41F6AE00EAC5B9 /* ChatView.swift in Sources */,
 				E42819A62C403991008883D4 /* ContentView.swift in Sources */,
 				A63AF7DF2C404AAA00FE0B74 /* RegisterView.swift in Sources */,
 				E49FC8A22C419C5100102FC2 /* EmergencyAlertManager.swift in Sources */,
@@ -396,13 +406,15 @@
 				A6E0C3F62C411E0A006E584B /* ProfileView.swift in Sources */,
 				A6E0C3F42C411DBF006E584B /* CustomRoundedButton.swift in Sources */,
 				A63AF7E12C404B4E00FE0B74 /* FirebaseViewModel.swift in Sources */,
-				A6E0C3FE2C41309D006E584B /* Location.swift in Sources */,
 				A6E0C3F82C411F10006E584B /* EmergencyView.swift in Sources */,
 				A63AF7F42C40C7D600FE0B74 /* AppDelegate.swift in Sources */,
 				A6E0C4002C4135B0006E584B /* TrackView.swift in Sources */,
 				A63AF7F82C4109C700FE0B74 /* Line.swift in Sources */,
+				E4A8AFAF2C41F78200EAC5B9 /* OpenAIService.swift in Sources */,
+				E4A8AFAB2C41F76700EAC5B9 /* Location.swift in Sources */,
 				A6E0C3F12C411B69006E584B /* ImagePicker.swift in Sources */,
 				A6E0C3FC2C413075006E584B /* LocationViewModel.swift in Sources */,
+				E4A8AFAE2C41F78200EAC5B9 /* NetworkMonitor.swift in Sources */,
 				A63AF7DB2C403C0900FE0B74 /* HomeView.swift in Sources */,
 				E42819A42C403991008883D4 /* AlertSystemApp.swift in Sources */,
 			);
