@@ -87,55 +87,29 @@ struct HomeView: View {
             
             Spacer()
             
-            if(haveEmergencyContact){
-                ZStack {
-                    Circle()
-                        .frame(width: 210, height: 350)
-                        .foregroundColor(Color.white)
-                        .shadow(radius: 10)
-                    
-                    Circle()
-                        .trim(from: 0.00, to: tapProgress)
-                        .stroke(Color.red.opacity(0.7), style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                        .frame(width: 190, height: 190)
-                        .rotationEffect(Angle(degrees: -90))
-                    
-                    Button(action: {
-                        handlePressStart()
-                    }, label: {
-                        Text("SOS")
-                            .font(Font.system(size: 60, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(50)
-                            .background(Color.red)
-                            .clipShape(Circle())
-                    })
-                }
-            }else{
-                ZStack {
-                    Circle()
-                        .frame(width: 210, height: 350)
-                        .foregroundColor(Color.white)
-                        .shadow(radius: 10)
-                    
-                    Circle()
-                        .trim(from: 0.00, to: tapProgress)
-                        .stroke(Color.gray.opacity(0.7), style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                        .frame(width: 190, height: 190)
-                        .rotationEffect(Angle(degrees: -90))
-                    
-                    Button(action: {
-                        handlePressStart()
-                    }, label: {
-                        Text("SOS")
-                            .font(Font.system(size: 60, weight: .bold))
-                            .foregroundColor(.white)
-                            .padding(50)
-                            .background(Color.gray)
-                            .clipShape(Circle())
-                    })
-                    .disabled(true)
-                }
+            ZStack {
+                Circle()
+                    .frame(width: 210, height: 350)
+                    .foregroundColor(Color.white)
+                    .shadow(radius: 10)
+                
+                Circle()
+                    .trim(from: 0.00, to: tapProgress)
+                    .stroke(Color.gray.opacity(0.7), style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
+                    .frame(width: 190, height: 190)
+                    .rotationEffect(Angle(degrees: -90))
+                
+                Button(action: {
+                    handlePressStart()
+                }, label: {
+                    Text("SOS")
+                        .font(Font.system(size: 60, weight: .bold))
+                        .foregroundColor(.white)
+                        .padding(50)
+                        .background(Color.gray)
+                        .clipShape(Circle())
+                })
+                .disabled(!haveEmergencyContact)
             }
             
             Text("To start emergency tap the button 3 times")
