@@ -6,7 +6,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             if viewModel.isSignedIn {
-                HomeView()
+                TrackView()
             } else {
                 RegisterView()
             }
