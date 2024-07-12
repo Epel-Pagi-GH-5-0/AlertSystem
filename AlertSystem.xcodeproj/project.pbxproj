@@ -48,6 +48,8 @@
 		E42819BA2C403993008883D4 /* AlertSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlertSystemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42819BE2C403993008883D4 /* AlertSystemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemUITests.swift; sourceTree = "<group>"; };
 		E42819C02C403993008883D4 /* AlertSystemUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSystemUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4FBC0B02C40CCC200B7A2C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E4FBC0B12C40CCD700B7A2C3 /* AlertSystem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlertSystem.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,8 @@
 		E42819A22C403991008883D4 /* AlertSystem */ = {
 			isa = PBXGroup;
 			children = (
+				E4FBC0B12C40CCD700B7A2C3 /* AlertSystem.entitlements */,
+				E4FBC0B02C40CCC200B7A2C3 /* Info.plist */,
 				E42819A32C403991008883D4 /* AlertSystemApp.swift */,
 				E42819A52C403991008883D4 /* ContentView.swift */,
 				A63AF7D72C403B5E00FE0B74 /* Model */,
@@ -454,12 +458,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AlertSystem/AlertSystem.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlertSystem/Preview Content\"";
-				DEVELOPMENT_TEAM = T7SD288Q5G;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlertSystem/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -484,12 +490,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AlertSystem/AlertSystem.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlertSystem/Preview Content\"";
-				DEVELOPMENT_TEAM = T7SD288Q5G;
+				DEVELOPMENT_TEAM = Z5LAH6MA86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AlertSystem/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
