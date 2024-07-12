@@ -17,45 +17,30 @@ struct ProfileView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            VStack(spacing: 10) {
-                NavigationLink(destination: {
-                    UserDataView()
-                }, label: {
-                    Text("User Data (Required)")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                })
-                
-                
-                NavigationLink(destination: {
-                    EmergencyView()
-                }, label: {
-                    Text("Emergency Contact (Required)")
-                        .padding()
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                })
-            }
-            
-            Divider() // Adds a divider between buttons and emergency contacts
-            
-            VStack(alignment: .leading, spacing: 10) {
-                Text("Emergency Contacts:")
-                    .font(.headline)
-                    .padding(.bottom, 5)
-                
-                ForEach(emergencyContacts, id: \.self) { contact in
-                    Text(contact)
+            List {
+                Section(header: Text("Personal Information").foregroundColor(.black)) {
+                    NavigationLink(destination: UserDataView()) {
+                        HStack {
+                            Text("User Data (Required)")
+                            Spacer()
+                            Text("Not set")
+                        }
+                    }
+                    NavigationLink(destination: EmergencyView()) {
+                        HStack {
+                            Text("Emergency Contact (Required)")
+                            Spacer()
+                            Text("Not set")
+                        }
+                    }
                 }
             }
-            .padding()
-            .background(Color.gray.opacity(0.1))
-            .cornerRadius(10)
+            .listStyle(GroupedListStyle())
+            .background(Color.clear)
+            .padding() // Optional: Add padding around the list
         }
         .padding()
+        .background(Color.background) // Set VStack background explicitly to white
     }
 }
 
