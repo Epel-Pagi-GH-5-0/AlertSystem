@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @StateObject var viewModel = NotificationViewModel() // Use @StateObject for managing ObservableObject
+    @StateObject var viewModel = NotificationViewModel() 
     
     @State private var titleVal = "SOS"
     @State private var bodyVal = "SOS - Somebody needs help!"

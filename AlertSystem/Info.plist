@@ -6,5 +6,17 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+    <!-- Other existing keys in Info.plist -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.857565152450-607feuat7vk7jb5q9gf93blj0non0sf7</string>
+            </array>
+        </dict>
+        <!-- You can have multiple URL schemes if needed -->
+    </array>
+    <!-- Other existing keys in Info.plist -->
 </dict>
 </plist>
