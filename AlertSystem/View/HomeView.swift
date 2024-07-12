@@ -8,7 +8,7 @@ struct HomeView: View {
     @State private var bodyVal = "SOS - Somebody needs help!"
     @State private var identifierVal = "SOS"
     @State private var tapProgress: CGFloat = 0.00
-    @State private var haveEmergencyContact = false
+    @State private var haveEmergencyContact = true
 
     var body: some View {
         VStack {
@@ -65,23 +65,45 @@ struct HomeView: View {
                 .padding(.top, 20)
             }
             
-            ZStack {
-                Rectangle()
-                    .frame(width: 350, height: 80)
-                    .cornerRadius(10)
-                    .foregroundColor(Color.yellow.opacity(0.2))
-                    .padding(.top, 20)
-                
-                HStack(alignment: .center) {
-                    Image(systemName: "exclamationmark.triangle.fill")
-                        .font(.title)
-                        .foregroundColor(.yellow)
-                        .padding(.trailing, 10)
-                        .padding(.top, 15)
-                    Text("To activate alerts, please set up an emergency contact. Go to your profile to add one now.")
-                        .frame(width: 250)
-                        .multilineTextAlignment(.leading)
+            if(haveEmergencyContact && tapProgress >= 1.00){
+                ZStack {
+                    Rectangle()
+                        .frame(width: 350, height: 80)
+                        .cornerRadius(10)
+                        .foregroundColor(Color.green.opacity(0.2))
                         .padding(.top, 20)
+                    
+                    HStack(alignment: .center) {
+                        Image(systemName: "info.circle.fill")
+                            .font(.title)
+                            .foregroundColor(.green)
+                            .padding(.trailing, 10)
+                            .padding(.top, 15)
+                        Text("Your SOS alert has been sent successfully.")
+                            .frame(width: 250)
+                            .multilineTextAlignment(.leading)
+                            .padding(.top, 20)
+                    }
+                }
+            }else {
+                ZStack {
+                    Rectangle()
+                        .frame(width: 350, height: 80)
+                        .cornerRadius(10)
+                        .foregroundColor(Color.yellow.opacity(0.2))
+                        .padding(.top, 20)
+                    
+                    HStack(alignment: .center) {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .font(.title)
+                            .foregroundColor(.yellow)
+                            .padding(.trailing, 10)
+                            .padding(.top, 15)
+                        Text("To activate alerts, please set up an emergency contact. Go to your profile to add one now.")
+                            .frame(width: 250)
+                            .multilineTextAlignment(.leading)
+                            .padding(.top, 20)
+                    }
                 }
             }
             
@@ -89,13 +111,13 @@ struct HomeView: View {
             
             ZStack {
                 Circle()
-                    .frame(width: 210, height: 350)
+                    .frame(width: 210, height: 250)
                     .foregroundColor(Color.white)
                     .shadow(radius: 10)
                 
                 Circle()
                     .trim(from: 0.00, to: tapProgress)
-                    .stroke(Color.gray.opacity(0.7), style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
+                    .stroke(haveEmergencyContact ? Color.red.opacity(0.7) : Color.gray.opacity(0.7), style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
                     .frame(width: 190, height: 190)
                     .rotationEffect(Angle(degrees: -90))
                 
@@ -106,17 +128,34 @@ struct HomeView: View {
                         .font(Font.system(size: 60, weight: .bold))
                         .foregroundColor(.white)
                         .padding(50)
-                        .background(Color.gray)
+                        .background(haveEmergencyContact ? Color.red : Color.gray)
                         .clipShape(Circle())
                 })
                 .disabled(!haveEmergencyContact)
             }
             
+            Button(action: {
+                tapProgress = 0.0
+            }) {
+                HStack {
+                    Image(systemName: "x.circle.fill")
+                        .foregroundStyle(.white)
+                    
+                    Text("Cancel")
+                        .foregroundStyle(.white)
+                }
+                .frame(width: 100, height: 10)
+                .padding()
+                .background(Color.gray)
+                .cornerRadius(20)
+            }
+            .opacity(haveEmergencyContact && tapProgress > 0.0 ? 1 : 0)
+
+            Spacer()
+            
             Text("To start emergency tap the button 3 times")
                 .frame(width: 200)
                 .multilineTextAlignment(.center)
-            
-            Spacer()
         }
         .padding()
         .onAppear {
